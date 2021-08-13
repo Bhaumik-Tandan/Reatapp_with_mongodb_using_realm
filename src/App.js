@@ -3,6 +3,8 @@ import College from './collge';
 import Student from './student';
 import Graph from './graph';
 import ReactLoading from 'react-loading';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 const skills=["c","c++","java","python","webdev","appdev"];
 const course=["btech","mtech","phd","bsc"];
 class App extends Component 
@@ -19,7 +21,10 @@ class App extends Component
       gf:false,
       graph_city:[],
       graph_skills:[],
-      graph_course:[]
+      graph_course:[],
+      stylec:{backgroundColor: "#58b851",fontSize: "2vw"},
+      style:{fontSize: "2vw"},
+      stylep:{fontSize: "2vw"}
     }
     this.func=this.func.bind(this);
     this.cole=this.cole.bind(this);
@@ -87,28 +92,29 @@ class App extends Component
 }
 cole()
 {
-  this.setState({cc:false,gf:false});
+  this.setState({cc:false,gf:false, stylec:{backgroundColor: "#58b851",fontSize: "2vw"},stylep:{fontSize: "2vw"},style:{fontSize: "2vw"}});
 } 
 ste()
 {
-  this.setState({cc:true,gf:false});
+  this.setState({cc:true,gf:false, stylec:{fontSize: "2vw"},stylep:{backgroundColor: "#58b851",fontSize: "2vw"},style:{fontSize: "2vw"}});
 }
 grf()
 {
-  this.setState({gf:true});
+  this.setState({gf:true, stylec:{fontSize: "2vw"},stylep:{fontSize: "2vw"},style:{backgroundColor: "#58b851",fontSize: "2vw"}});
 }
   render()
   {
     return(
       <div className="App">
-        <center>{this.state.cl||<button onClick={this.cole}>College</button>}
-        {this.state.cl||<button onClick={this.ste}>Students</button>}
-        {this.state.cl||<button onClick={this.grf}>Graphs</button>}</center>
+        {this.state.cl||<Tabs style={{backgroundColor: "#9cd598", color:"#10230e"}} centered
+      ><center><Tab label="Colleges" onClick={this.cole} style={this.state.stylec}/>
+        <Tab label="Students" onClick={this.ste} style={this.state.stylep}/>
+        <Tab label="Visualisations" onClick={this.grf} style={this.state.style}/></center></Tabs>}
         {!this.state.cl||<div style={{position:"absolute",top:"30%",left:"45%"}}>
-         Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}
+         Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}<div style={{position:"absolute",top:"10%"}}>
        {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this.state.col}></College>}
        {this.state.cl||!this.state.cc||this.state.gf||<Student key={this.state} list={this.state.std}></Student>}
-       {this.state.cl||!this.state.gf||<Graph col={this.state.col} std={this.state.std} data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
+       {this.state.cl||!this.state.gf||<Graph col={this.state.col} std={this.state.std} data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}</div>
       </div>
     );
   }

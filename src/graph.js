@@ -3,10 +3,9 @@ import './graph.css';
 import Drill from "./drilldown";
 import ReactLoading from 'react-loading';
 import { PieChart } from 'react-minimal-pie-chart';
-import { ContactlessOutlined } from '@material-ui/icons';
 const defaultLabelStyle = {
   fontSize: '0.4vw',
-  fontFamily: 'sans-serif',
+  fontFamily: 'Helvetica'
 };
 const skills=["c","c++","java","python","webdev","appdev"];
 const course=["btech","mtech","phd","bsc"];
@@ -77,15 +76,15 @@ class Graph extends Component
         <br/>
         {!this.state.show_chart||<Drill state={this}></Drill>}
         {this.state.show_chart||<div className="grid-container">
-      <PieChart className="grid-item" key={this.props.data} label={({ dataEntry }) => dataEntry.title} onClick={(e, segmentIndex) => this.drill_city(segmentIndex)}
+      <PieChart  className="grid-item" key={this.props.data} label={({ dataEntry }) => dataEntry.title} onClick={(e, segmentIndex) => this.drill_city(segmentIndex)} animate={true} lineWidth={70}
         labelStyle={{
           ...defaultLabelStyle,
         }} data={this.props.data} ></PieChart>
-        <PieChart className="grid-item" key={this.props.data2} data={this.props.data2} label={({ dataEntry }) => dataEntry.title} onClick={(e, segmentIndex) => this.drill_skill(segmentIndex)}
+        <PieChart className="grid-item" key={this.props.data2} data={this.props.data2} label={({ dataEntry }) => dataEntry.title} onClick={(e, segmentIndex) => this.drill_skill(segmentIndex)} animate={true} lineWidth={70}
         labelStyle={{
           ...defaultLabelStyle,
         }}></PieChart>
-    <PieChart className="grid-item"  key={this.props.data3} data={this.props.data3} label={({ dataEntry }) => dataEntry.title} onClick={(e, segmentIndex) => this.drill_course(segmentIndex)}
+    <PieChart className="grid-item"  key={this.props.data3} data={this.props.data3} label={({ dataEntry }) => dataEntry.title} onClick={(e, segmentIndex) => this.drill_course(segmentIndex)} animate={true} lineWidth={70}
         labelStyle={{
           ...defaultLabelStyle,
         }} ></PieChart>
