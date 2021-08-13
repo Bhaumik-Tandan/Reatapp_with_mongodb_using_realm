@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Reatapp_with_mongodb_using_realm/static/css/main.1bd04589.chunk.css",
-    "main.js": "/Reatapp_with_mongodb_using_realm/static/js/main.fcf3857b.chunk.js",
-    "main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/main.fcf3857b.chunk.js.map",
+    "main.js": "/Reatapp_with_mongodb_using_realm/static/js/main.d2b4bad2.chunk.js",
+    "main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/main.d2b4bad2.chunk.js.map",
     "runtime-main.js": "/Reatapp_with_mongodb_using_realm/static/js/runtime-main.91794c65.js",
     "runtime-main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/runtime-main.91794c65.js.map",
     "static/js/2.bff181ec.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/2.bff181ec.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.91794c65.js",
     "static/js/3.b09b8fc5.chunk.js",
     "static/css/main.1bd04589.chunk.css",
-    "static/js/main.fcf3857b.chunk.js"
+    "static/js/main.d2b4bad2.chunk.js"
   ]
 }
