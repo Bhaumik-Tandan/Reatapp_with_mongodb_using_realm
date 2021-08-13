@@ -111,7 +111,7 @@ grf()
         <Tab label="Students" onClick={this.ste} style={this.state.stylep}/>
         <Tab label="Visualisations" onClick={this.grf} style={this.state.style}/></center></Tabs>}
         {!this.state.cl||<div style={{position:"absolute",top:"30%",left:"45%"}}>
-         Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/>
+         Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}
        {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this.state.col}></College>}
        {this.state.cl||!this.state.cc||this.state.gf||<Student key={this.state} list={this.state.std}></Student>}
        {this.state.cl||!this.state.gf||<Graph col={this.state.col} std={this.state.std} data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
