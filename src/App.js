@@ -108,7 +108,7 @@ grf()
          Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}
        {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this.state.col}></College>}
        {this.state.cl||!this.state.cc||this.state.gf||<Student key={this.state} list={this.state.std}></Student>}
-       {this.state.cl||!this.state.gf||<Graph col={this.state.col} data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
+       {this.state.cl||!this.state.gf||<Graph col={this.state.col} std={this.state.std} data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
       </div>
     );
   }
