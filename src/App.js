@@ -83,7 +83,6 @@ class App extends Component
               }
             )});
            });
-           console.log(this.state.graph_course);
     this.setState({cl:false});
 }
 cole()
@@ -107,9 +106,9 @@ grf()
         {this.state.cl||<button onClick={this.grf}>Graphs</button>}</center>
         {!this.state.cl||<div style={{position:"absolute",top:"30%",left:"45%"}}>
          Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}
-       {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this}></College>}
-       {this.state.cl||!this.state.cc||this.state.gf||<Student key={this.state} list={this}></Student>}
-       {this.state.cl||!this.state.gf||<Graph data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
+       {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this.state.col}></College>}
+       {this.state.cl||!this.state.cc||this.state.gf||<Student key={this.state} list={this.state.std}></Student>}
+       {this.state.cl||!this.state.gf||<Graph col={this.state.col} data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
       </div>
     );
   }

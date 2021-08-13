@@ -38,7 +38,7 @@ class Student extends Component
   {
     return(
       <div className="App">
-         <MaterialTable title="Student Details" data={this.props.list.state.std} columns={this.state.columns} options={this.state.option}/>
+         <MaterialTable title="Student Details" data={this.props.list} columns={this.state.columns} options={this.state.option}/>
       </div>
     );
   }

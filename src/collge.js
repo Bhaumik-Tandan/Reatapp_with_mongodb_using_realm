@@ -41,7 +41,7 @@ class College extends Component
   {
     return(
       <div className="App">
-       <MaterialTable title="College Details" data={this.props.list.state.col} columns={this.state.columns} options={this.state.option}/>
+       <MaterialTable title="College Details" data={this.props.list} columns={this.state.columns} options={this.state.option}/>
       </div>
     );
   }
