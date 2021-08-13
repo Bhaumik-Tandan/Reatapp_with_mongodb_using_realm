@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { Component } from 'react';
 import College from './collge';
 import Student from './student';
@@ -24,10 +22,10 @@ class App extends Component
       graph_course:[]
     }
     this.func=this.func.bind(this);
-    this.func();
     this.cole=this.cole.bind(this);
     this.ste=this.ste.bind(this);
     this.grf=this.grf.bind(this);
+    this.func();
   }
   async func() {
     const response = await fetch("https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/student-flnbc/service/college/incoming_webhook/college");
@@ -104,9 +102,9 @@ grf()
   {
     return(
       <div className="App">
-        {this.state.cl||<button onClick={this.cole}>College</button>}
+        <center>{this.state.cl||<button onClick={this.cole}>College</button>}
         {this.state.cl||<button onClick={this.ste}>Students</button>}
-        {this.state.cl||<button onClick={this.grf}>Graphs</button>}
+        {this.state.cl||<button onClick={this.grf}>Graphs</button>}</center>
         {!this.state.cl||<div style={{position:"absolute",top:"30%",left:"45%"}}>
          Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}
        {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this}></College>}

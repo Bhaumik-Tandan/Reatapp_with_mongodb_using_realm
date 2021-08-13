@@ -32,7 +32,7 @@ c.connect(url, function(err, db) {
 
  s.collection("col").insertMany(co, function(err, res) {
  if (err) throw err;
- console.log("(ii)" + res.insertedCount + " Students data inserted\n");
+ console.log("(ii)" + res.insertedCount + " College data inserted\n");
 
  });
 });
