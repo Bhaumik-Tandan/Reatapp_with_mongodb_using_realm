@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Reatapp_with_mongodb_using_realm/static/css/main.1bd04589.chunk.css",
-    "main.js": "/Reatapp_with_mongodb_using_realm/static/js/main.d2b4bad2.chunk.js",
-    "main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/main.d2b4bad2.chunk.js.map",
-    "runtime-main.js": "/Reatapp_with_mongodb_using_realm/static/js/runtime-main.91794c65.js",
-    "runtime-main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/runtime-main.91794c65.js.map",
-    "static/js/2.bff181ec.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/2.bff181ec.chunk.js",
-    "static/js/2.bff181ec.chunk.js.map": "/Reatapp_with_mongodb_using_realm/static/js/2.bff181ec.chunk.js.map",
-    "static/js/3.b09b8fc5.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/3.b09b8fc5.chunk.js",
-    "static/js/3.b09b8fc5.chunk.js.map": "/Reatapp_with_mongodb_using_realm/static/js/3.b09b8fc5.chunk.js.map",
+    "main.css": "/Reatapp_with_mongodb_using_realm/static/css/main.7adfd5b4.chunk.css",
+    "main.js": "/Reatapp_with_mongodb_using_realm/static/js/main.80d41943.chunk.js",
+    "main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/main.80d41943.chunk.js.map",
+    "runtime-main.js": "/Reatapp_with_mongodb_using_realm/static/js/runtime-main.ccd130e9.js",
+    "runtime-main.js.map": "/Reatapp_with_mongodb_using_realm/static/js/runtime-main.ccd130e9.js.map",
+    "static/js/2.be45081b.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/2.be45081b.chunk.js",
+    "static/js/2.be45081b.chunk.js.map": "/Reatapp_with_mongodb_using_realm/static/js/2.be45081b.chunk.js.map",
+    "static/js/3.ad8f15e9.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/3.ad8f15e9.chunk.js",
+    "static/js/3.ad8f15e9.chunk.js.map": "/Reatapp_with_mongodb_using_realm/static/js/3.ad8f15e9.chunk.js.map",
     "static/js/4.9dca7b3a.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/4.9dca7b3a.chunk.js",
     "static/js/4.9dca7b3a.chunk.js.map": "/Reatapp_with_mongodb_using_realm/static/js/4.9dca7b3a.chunk.js.map",
     "static/js/5.3fbeb02e.chunk.js": "/Reatapp_with_mongodb_using_realm/static/js/5.3fbeb02e.chunk.js",
     "static/js/5.3fbeb02e.chunk.js.map": "/Reatapp_with_mongodb_using_realm/static/js/5.3fbeb02e.chunk.js.map",
     "index.html": "/Reatapp_with_mongodb_using_realm/index.html",
-    "static/css/main.1bd04589.chunk.css.map": "/Reatapp_with_mongodb_using_realm/static/css/main.1bd04589.chunk.css.map",
-    "static/js/2.bff181ec.chunk.js.LICENSE.txt": "/Reatapp_with_mongodb_using_realm/static/js/2.bff181ec.chunk.js.LICENSE.txt",
-    "static/js/3.b09b8fc5.chunk.js.LICENSE.txt": "/Reatapp_with_mongodb_using_realm/static/js/3.b09b8fc5.chunk.js.LICENSE.txt",
+    "static/css/main.7adfd5b4.chunk.css.map": "/Reatapp_with_mongodb_using_realm/static/css/main.7adfd5b4.chunk.css.map",
+    "static/js/2.be45081b.chunk.js.LICENSE.txt": "/Reatapp_with_mongodb_using_realm/static/js/2.be45081b.chunk.js.LICENSE.txt",
+    "static/js/3.ad8f15e9.chunk.js.LICENSE.txt": "/Reatapp_with_mongodb_using_realm/static/js/3.ad8f15e9.chunk.js.LICENSE.txt",
     "static/js/4.9dca7b3a.chunk.js.LICENSE.txt": "/Reatapp_with_mongodb_using_realm/static/js/4.9dca7b3a.chunk.js.LICENSE.txt",
     "static/js/5.3fbeb02e.chunk.js.LICENSE.txt": "/Reatapp_with_mongodb_using_realm/static/js/5.3fbeb02e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.91794c65.js",
-    "static/js/3.b09b8fc5.chunk.js",
-    "static/css/main.1bd04589.chunk.css",
-    "static/js/main.d2b4bad2.chunk.js"
+    "static/js/runtime-main.ccd130e9.js",
+    "static/js/3.ad8f15e9.chunk.js",
+    "static/css/main.7adfd5b4.chunk.css",
+    "static/js/main.80d41943.chunk.js"
   ]
 }
