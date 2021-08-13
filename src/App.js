@@ -5,6 +5,8 @@ import College from './collge';
 import Student from './student';
 import Graph from './graph';
 import ReactLoading from 'react-loading';
+const skills=["c","c++","java","python","webdev","appdev"];
+const course=["btech","mtech","phd","bsc"];
 class App extends Component 
 {
   constructor(p)
@@ -16,7 +18,10 @@ class App extends Component
       std:[],
       cl:true,
       cc:false,
-      gf:false
+      gf:false,
+      graph_city:[],
+      graph_skills:[],
+      graph_course:[]
     }
     this.func=this.func.bind(this);
     this.func();
@@ -25,7 +30,7 @@ class App extends Component
     this.grf=this.grf.bind(this);
   }
   async func() {
-    const response = await fetch(process.env.REACT_APP_COL_URI);
+    const response = await fetch("https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/student-flnbc/service/college/incoming_webhook/college");
     const data = await response.json();
     for(var i=0;i<data.length;i++){
     this.setState({ col: this.state.col.concat(
@@ -38,7 +43,7 @@ class App extends Component
             "course":data[i].course.join(", ")
             }
          )});}
-    const respons=await fetch(process.env.REACT_APP_STD_URI);
+    const respons=await fetch("https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/student-flnbc/service/student/incoming_webhook/webhook0");
     const dat = await respons.json();
     for(var i=0;i<dat.length;i++){
       this.setState({ std: this.state.std.concat(
@@ -50,6 +55,37 @@ class App extends Component
                "skills":dat[i].skills.join(", ")
               }
            )});}
+           for(var i=1;i<=10;i++)
+           {
+             this.setState({ graph_city: this.state.graph_city.concat(
+               {
+                 title: "City "+i,
+                 value: this.state.col.filter((obj) => obj.location.split(", ")[0] === "City "+i).length,
+                 color:'#' +(Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6)
+               }
+             )});
+           }
+           const arr=this.state.std.map(a => a.skills).join("|");
+           skills.forEach((i)=>{
+            this.setState({ graph_skills: this.state.graph_skills.concat(
+              {
+                title: i,
+                value: arr.split(i).length - 1,
+                color:'#' +(Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6)
+              }
+            )});
+           });
+    const ar=this.state.col.map(a => a.course).join("|");
+           course.forEach((i)=>{
+            this.setState({ graph_course: this.state.graph_course.concat(
+              {
+                title: i,
+                value: ar.split(i).length - 1,
+                color:'#' +(Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6)
+              }
+            )});
+           });
+           console.log(this.state.graph_course);
     this.setState({cl:false});
 }
 cole()
@@ -75,7 +111,7 @@ grf()
          Loading <ReactLoading type="spokes" color="red" height={'120%'} width={'120%'}/></div>}
        {this.state.cl||this.state.cc||this.state.gf||<College key={this.state} list={this}></College>}
        {this.state.cl||!this.state.cc||this.state.gf||<Student key={this.state} list={this}></Student>}
-       {this.state.cl||!this.state.gf||<Graph></Graph>}
+       {this.state.cl||!this.state.gf||<Graph data={this.state.graph_city} data2={this.state.graph_skills} data3={this.state.graph_course}></Graph>}
       </div>
     );
   }

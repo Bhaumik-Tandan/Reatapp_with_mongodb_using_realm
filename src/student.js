@@ -31,7 +31,6 @@ class Student extends Component
         },
       ]
     }
-    console.log(this.props.list.state.std);
   }
      
 
