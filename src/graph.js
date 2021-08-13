@@ -40,7 +40,6 @@ class Graph extends Component
       this.setState({drill_course_data:this.state.drill_course_data.concat(this.props.col[i])});
     }
     this.setState({show_chart:true,show_drill_city:true,show_drill_skill:true,hide:false,show_drill_course:false});
-    console.log(e,this.state.drill_course_data);
   }
  async drill_city(e)
   {
