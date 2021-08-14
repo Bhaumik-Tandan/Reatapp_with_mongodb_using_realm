@@ -4,6 +4,9 @@ This is the sample project of how can we dirrectly connect
 ReactJs with MongoDB database without the use of any kind of 
 backend.
 
+The website has been deployed on GitHUB pages on the following link 
+
+https://bhaumik-tandan.github.io/Reatapp_with_mongodb_using_realm/
 
 ## Demo
 
@@ -34,6 +37,7 @@ We can also export the data in form of pdf or csv.
 ## Database feeding
 
 The database has been feeding in MongoDB atlas using the code present in
+
 https://github.com/Bhaumik-Tandan/Reatapp_with_mongodb_using_realm/blob/master/data_generation/college.js
 
 https://github.com/Bhaumik-Tandan/Reatapp_with_mongodb_using_realm/blob/master/data_generation/student.js
@@ -140,3 +144,50 @@ on click function is called which filters the data and passes it
 on to Drill component which further passes it to College or Student
 coponent based on the pie chart the has been clicked.
 
+
+## Installation
+
+To run the website in your sytem, you should have 
+node installed with npm configured.
+
+You can download the repository in form of zip
+or if you have git installed you can directly write
+```bash
+  git clone https://github.com/Bhaumik-Tandan/Reatapp_with_mongodb_using_realm
+  cd Reatapp_with_mongodb_using_realm
+```
+And then you have to install the dependencies using npm,
+So run the command
+
+```bash
+  npm install
+```
+
+Now you can write
+```bash
+  npm start
+```
+
+And you will be able to access the website on http://localhost:3000/
+    
+    
+## Deployment
+
+To publish the application on the Github pages
+first you need to create a Github repository of 
+the project
+
+And then refer to the following link to deploy your application
+
+https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+
+Make sure to run the following command everytime you make changes to 
+the application to get it reflected in your pages site.
+
+```bash
+  npm run deploy
+```
+
+
+## 🛠 Skills Used
+NoSQL, ReactJs, HTML, CSS, JavaScript, Realm...
